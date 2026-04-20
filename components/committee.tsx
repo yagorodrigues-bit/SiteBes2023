@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Instagram, Linkedin, Mail } from "lucide-react"
+import { Instagram, Linkedin, Mail, Github, MessageCircle, Globe } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { motion } from "framer-motion"
 
@@ -16,6 +16,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Andre Luiz",
@@ -26,6 +32,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Annia Araujo",
@@ -36,6 +48,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Doglas Araujo",
@@ -46,6 +64,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Fabricio Cardoso",
@@ -56,6 +80,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Glaucia Nunes",
@@ -66,6 +96,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Maria Joselia",
@@ -76,6 +112,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
     {
       name: "Yago Cabral",
@@ -86,6 +128,12 @@ export function Committee() {
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
+      links: {
+        whatsapp: "",
+        github: "",
+        linkedin: "",
+        portfolio: ""
+      }
     },
   ]
 
@@ -117,6 +165,28 @@ export function Committee() {
                   <p className="text-xs text-secondary font-medium mb-3">
                     {member.role}
                   </p>
+                  <div className="flex items-center justify-center gap-2">
+                    {member.links.whatsapp && (
+                      <a href={member.links.whatsapp} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <MessageCircle size={16} />
+                      </a>
+                    )}
+                    {member.links.github && (
+                      <a href={member.links.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <Github size={16} />
+                      </a>
+                    )}
+                    {member.links.linkedin && (
+                      <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <Linkedin size={16} />
+                      </a>
+                    )}
+                    {member.links.portfolio && (
+                      <a href={member.links.portfolio} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <Globe size={16} />
+                      </a>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             </Reveal>
