@@ -51,20 +51,20 @@ export function Hero() {
         </motion.h1>
         
         {/* Container do Texto que Rola (Efeito Slide-up) */}
-        <div className="h-[1.2em] mb-6 overflow-hidden relative w-full flex justify-center">
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={words[index]}
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -30, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold block absolute"
-            >
-              {words[index]}
-            </motion.span>
-          </AnimatePresence>
-        </div>
+<div className="h-[1.5em] mb-6 overflow-hidden relative w-full flex justify-center items-center">
+  <AnimatePresence mode="wait">
+    <motion.span
+      key={words[index]}
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -40, opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      className="text-3xl md:text-4xl lg:text-5xl font-semibold block absolute"
+    >
+      {words[index]}
+    </motion.span>
+  </AnimatePresence>
+</div>
 
         {/* Subtítulo com Fade In */}
         <motion.p 
