@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { User, Building2, QrCode, Copy, Check, Award, Star, Diamond } from "lucide-react"
 import Image from "next/image"
+import { Reveal } from "@/components/reveal"
+import { motion } from "framer-motion"
 
 export function HowToSupport() {
   const [copied, setCopied] = useState(false)
@@ -65,12 +67,16 @@ export function HowToSupport() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
-          Como Apoiar
-        </h2>
-        <p className="text-white/80 text-center mb-12 max-w-2xl mx-auto text-lg">
-          Invista no sucesso da nossa turma e no futuro da tecnologia
-        </p>
+        <Reveal direction="up">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+            Como Apoiar
+          </h2>
+        </Reveal>
+        <Reveal direction="up">
+          <p className="text-white/80 text-center mb-12 max-w-2xl mx-auto text-lg">
+            Invista no sucesso da nossa turma e no futuro da tecnologia
+          </p>
+        </Reveal>
 
         {/* Tab Buttons */}
         <div className="flex justify-center gap-4 mb-8">
@@ -101,57 +107,59 @@ export function HowToSupport() {
         {/* Individual Contribution */}
         {activeTab === "individual" && (
           <div className="max-w-2xl mx-auto">
-            <Card className="bg-white/95 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-center text-foreground">
-                  Apoie Nossa Turma
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="text-center">
-                  <p className="text-muted-foreground mb-6">
-                    Faça sua doação via PIX de forma rápida e segura
-                  </p>
+            <Reveal direction="up">
+              <Card className="bg-white/95 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-center text-foreground">
+                    Apoie Nossa Turma
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-center">
+                    <p className="text-muted-foreground mb-6">
+                      Faça sua doação via PIX de forma rápida e segura
+                    </p>
 
-                  {/* QR Code Placeholder */}
-                  <div className="w-48 h-48 mx-auto bg-muted rounded-lg flex items-center justify-center mb-6 border-2 border-dashed border-primary/20">
-                    <QrCode className="w-24 h-24 text-primary/50" />
-                  </div>
-
-                  {/* PIX Key */}
-                  <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between gap-4">
-                    <div className="text-left">
-                      <p className="text-sm text-muted-foreground">Chave PIX (E-mail)</p>
-                      <p className="font-mono text-foreground">{pixKey}</p>
+                    {/* QR Code Placeholder */}
+                    <div className="w-48 h-48 mx-auto bg-muted rounded-lg flex items-center justify-center mb-6 border-2 border-dashed border-primary/20">
+                      <QrCode className="w-24 h-24 text-primary/50" />
                     </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={handleCopy}
-                      className="shrink-0"
-                    >
-                      {copied ? (
-                        <>
-                          <Check className="w-4 h-4 mr-1" />
-                          Copiado
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="w-4 h-4 mr-1" />
-                          Copiar
-                        </>
-                      )}
-                    </Button>
-                  </div>
 
-                  {/* Bank Details */}
-                  <div className="mt-6 text-sm text-muted-foreground">
-                    <p>Banco: Nubank</p>
-                    <p>Titular: Comissão de Formatura BES 2023</p>
+                    {/* PIX Key */}
+                    <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between gap-4">
+                      <div className="text-left">
+                        <p className="text-sm text-muted-foreground">Chave PIX (E-mail)</p>
+                        <p className="font-mono text-foreground">{pixKey}</p>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={handleCopy}
+                        className="shrink-0"
+                      >
+                        {copied ? (
+                          <>
+                            <Check className="w-4 h-4 mr-1" />
+                            Copiado
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="w-4 h-4 mr-1" />
+                            Copiar
+                          </>
+                        )}
+                      </Button>
+                    </div>
+
+                    {/* Bank Details */}
+                    <div className="mt-6 text-sm text-muted-foreground">
+                      <p>Banco: Nubank</p>
+                      <p>Titular: Comissão de Formatura BES 2023</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Reveal>
           </div>
         )}
 
@@ -163,41 +171,44 @@ export function HowToSupport() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {tiers.map((tier, index) => (
-                <Card
-                  key={tier.name}
-                  className={`bg-white/95 backdrop-blur-sm relative overflow-hidden ${
-                    index === 2 ? "border-secondary border-2" : ""
-                  }`}
-                >
-                  {index === 2 && (
-                    <div className="absolute top-0 right-0 bg-secondary text-primary text-xs font-bold px-3 py-1 rounded-bl-lg">
-                      Destaque
-                    </div>
-                  )}
-                  <CardHeader className="text-center">
-                    <tier.icon className={`w-12 h-12 mx-auto mb-2 ${
-                      index === 0 ? "text-gray-400" :
-                      index === 1 ? "text-secondary" : "text-primary"
-                    }`} />
-                    <CardTitle className="text-foreground">{tier.name}</CardTitle>
-                    <p className="text-primary font-bold text-lg">{tier.value}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {tier.benefits.map((benefit, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90"
-                    >
-                      Escolher {tier.name}
-                    </Button>
-                  </CardContent>
-                </Card>
+                <Reveal key={tier.name} direction="right">
+                  <Card
+                    className={`bg-white/95 backdrop-blur-sm relative overflow-hidden ${
+                      index === 2 ? "border-secondary border-2" : ""
+                    }`}
+                  >
+                    {index === 2 && (
+                      <div className="absolute top-0 right-0 bg-secondary text-primary text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        Destaque
+                      </div>
+                    )}
+                    <CardHeader className="text-center">
+                      <tier.icon className={`w-12 h-12 mx-auto mb-2 ${
+                        index === 0 ? "text-gray-400" :
+                        index === 1 ? "text-secondary" : "text-primary"
+                      }`} />
+                      <CardTitle className="text-foreground">{tier.name}</CardTitle>
+                      <p className="text-primary font-bold text-lg">{tier.value}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-3">
+                        {tier.benefits.map((benefit, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button
+                          className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90"
+                        >
+                          Escolher {tier.name}
+                        </Button>
+                      </motion.div>
+                    </CardContent>
+                  </Card>
+                </Reveal>
               ))}
             </div>
           </div>
