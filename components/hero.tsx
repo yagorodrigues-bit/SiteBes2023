@@ -30,7 +30,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/fundo1.jpg"
+          src="/SiteBes2023/fundo1.jpg"
           alt="Turma de formandos BES 2023"
           fill
           className="object-cover"
