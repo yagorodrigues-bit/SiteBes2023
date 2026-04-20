@@ -123,7 +123,7 @@ export function HowToSupport() {
                     {/* QR Code Placeholder */}
                     <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center mb-6 border-2 border-primary/20 overflow-hidden relative">
                     <Image
-                       src="/SiteBes2023/qrcode-pix.png" // Substitua pelo caminho real da sua imagem
+                       src="/SiteBes2023/qrcode-pix.jpeg" // Substitua pelo caminho real da sua imagem
                        alt="QR Code para contribuição via Pix"
                       fill
                       className="object-contain p-2"
@@ -161,8 +161,8 @@ export function HowToSupport() {
 
                     {/* Bank Details */}
                     <div className="mt-6 text-sm text-muted-foreground">
-                      <p>Banco: Nubank</p>
-                      <p>Titular: Comissão de Formatura BES 2023</p>
+                      <p>Banco: Inter</p>
+                      <p>Titular: Yago Rodrigues Cabral</p>
                     </div>
                   </div>
                 </CardContent>
