@@ -12,7 +12,7 @@ export function HowToSupport() {
   const [copied, setCopied] = useState(false)
   const [activeTab, setActiveTab] = useState<"individual" | "empresa">("individual")
 
-  const pixKey = "bes2023.uepa@gmail.com"
+  const pixKey = "yagorodriguescabral@gmail.com"
 
   const handleCopy = () => {
     navigator.clipboard.writeText(pixKey)
@@ -121,9 +121,17 @@ export function HowToSupport() {
                     </p>
 
                     {/* QR Code Placeholder */}
-                    <div className="w-48 h-48 mx-auto bg-muted rounded-lg flex items-center justify-center mb-6 border-2 border-dashed border-primary/20">
-                      <QrCode className="w-24 h-24 text-primary/50" />
+                    <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center mb-6 border-2 border-primary/20 overflow-hidden relative">
+                    <Image
+                       src="/SiteBes2023/qrcode-pix.png" // Substitua pelo caminho real da sua imagem
+                       alt="QR Code para contribuição via Pix"
+                      fill
+                      className="object-contain p-2"
+                     />
                     </div>
+                    {/* <div className="w-48 h-48 mx-auto bg-muted rounded-lg flex items-center justify-center mb-6 border-2 border-dashed border-primary/20">
+                      <QrCode className="w-24 h-24 text-primary/50" />
+                    </div> */}
 
                     {/* PIX Key */}
                     <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between gap-4">
