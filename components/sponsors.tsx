@@ -11,6 +11,9 @@ export function Sponsors() {
     { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 4" },
     { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 5" },
     { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 6" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 7" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 8" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 9" },
   ]
 
   return (

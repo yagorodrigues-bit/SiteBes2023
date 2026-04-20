@@ -68,7 +68,7 @@ export function Committee() {
       role: "...",
       initials:  
             <img 
-              src="/SiteBes2023/joselia.png" 
+              src="/SiteBes2023/Joselia.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
