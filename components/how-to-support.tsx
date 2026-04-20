@@ -150,7 +150,7 @@ export function HowToSupport() {
             asChild
           >
             <a 
-              href={`https://wa.me/5591991186294?text=${encodeURIComponent("Olá! Fiz uma contribuição individual e gostaria de enviar meu comprovante e nome para o site.")}`}
+              href={`https://wa.me/5591991186294?text=${encodeURIComponent("Olá! Fiz uma contribuição individual e gostaria de enviar meu nome para o site.")}`}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -13,15 +13,18 @@ export function Hero() {
   const [fade, setFade] = useState(true)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false)
-      setTimeout(() => {
-        setIndex((prevIndex) => (prevIndex + 1) % words.length)
-        setFade(true)
-      }, 500)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [words.length])
+  const interval = setInterval(() => {
+    setFade(false); // Começa o fade-out rápido
+    
+    setTimeout(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+      setFade(true); // Começa o fade-in rápido
+    }, 200); // Sincronizado com a duration-200 do Tailwind
+    
+  }, 3000); // Mantém a troca a cada 3 segundos, ou diminua aqui também se quiser trocas mais frequentes
+
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -57,12 +60,12 @@ export function Hero() {
         {/* Subtítulo dinâmico */}
         <div className="h-[1.5em] mb-6"> 
           <span 
-            className={`text-3xl md:text-4xl lg:text-5xl font-semibold transition-opacity duration-500 block ${
-              fade ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {words[index]}
-          </span>
+  className={`text-3xl md:text-4xl lg:text-5xl font-semibold transition-opacity duration-200 block ${
+    fade ? "opacity-100" : "opacity-0"
+  }`}
+>
+  {words[index]}
+</span>
         </div>
 
         {/* Parágrafo - Vem de baixo suavemente */}
