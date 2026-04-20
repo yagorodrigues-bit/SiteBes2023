@@ -50,14 +50,14 @@ export function Hero() {
           BES 2023 – UEPA
         </motion.h1>
         
-        {/* Container do Texto que Rola (Efeito Slide-up) */}
-<div className="h-[1.8em] mb-6 overflow-hidden relative w-full flex justify-center items-center">
+{/* Container do Texto que Rola (Efeito Slide-up) */}
+<div className="h-[3rem] mb-6 overflow-hidden relative w-full flex justify-center items-center">
   <AnimatePresence mode="wait">
     <motion.span
       key={words[index]}
-      initial={{ y: 60, opacity: 0 }}
+      initial={{ y: 40, opacity: 0 }} // Reduzi de 60 para 40 para uma animação mais sutil
       animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -60, opacity: 0 }}
+      exit={{ y: -40, opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       className="text-3xl md:text-4xl lg:text-5xl font-semibold block absolute text-center w-full"
     >
