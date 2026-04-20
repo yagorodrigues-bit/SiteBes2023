@@ -5,26 +5,19 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { Sponsors } from "./sponsors"
-import { motion } from "framer-motion" //
+import { motion, AnimatePresence } from "framer-motion"
 
 export function Hero() {
   const words = ["Inovação", "Tecnologia"]
   const [index, setIndex] = useState(0)
-  const [fade, setFade] = useState(true)
 
   useEffect(() => {
-  const interval = setInterval(() => {
-    setFade(false); // Começa o fade-out rápido
-    
-    setTimeout(() => {
+    const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-      setFade(true); // Começa o fade-in rápido
-    }, 200); // Sincronizado com a duration-200 do Tailwind
-    
-  }, 3000); // Mantém a troca a cada 3 segundos, ou diminua aqui também se quiser trocas mais frequentes
+    }, 3000);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -45,44 +38,49 @@ export function Hero() {
         <div className="absolute inset-0 bg-primary/80" />
       </motion.div>
 
+      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white pt-20 flex flex-col items-center">
-        
-        {/* Título - Vem de cima com opacidade */}
+        {/* Título Principal Animado */}
         <motion.h1 
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-balance max-w-5xl"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-2 text-balance max-w-4xl"
         >
           BES 2023 – UEPA
         </motion.h1>
         
-        {/* Subtítulo dinâmico */}
-        <div className="h-[1.5em] mb-6"> 
-          <span 
-  className={`text-3xl md:text-4xl lg:text-5xl font-semibold transition-opacity duration-200 block ${
-    fade ? "opacity-100" : "opacity-0"
-  }`}
->
-  {words[index]}
-</span>
+        {/* Container do Texto que Rola (Efeito Slide-up) */}
+        <div className="h-[1.2em] mb-6 overflow-hidden relative w-full flex justify-center">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={words[index]}
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -30, opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold block absolute"
+            >
+              {words[index]}
+            </motion.span>
+          </AnimatePresence>
         </div>
 
-        {/* Parágrafo - Vem de baixo suavemente */}
+        {/* Subtítulo com Fade In */}
         <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
           className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed text-pretty"
         >
           Desenvolvemos soluções tecnológicas de impacto regional durante nossa graduação na UEPA. 
           Conheça nossa trajetória e nos ajude a celebrar esta conquista acadêmica.
         </motion.p>
         
-        {/* Botão com efeito de "Pulo" (Spring) e Hover */}
+        {/* Botão com animação Spring */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ 
             type: "spring", 
             stiffness: 260, 
@@ -119,7 +117,7 @@ export function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        {/* <div className="w-8 h-12 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+        <div className="w-8 h-12 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
           <motion.div 
             animate={{ 
               y: [0, 16, 0],
@@ -131,7 +129,7 @@ export function Hero() {
             }}
             className="w-1.5 h-3 bg-white/70 rounded-full" 
           />
-        </div> */}
+        </div>
       </motion.div>
     </section>
   )
