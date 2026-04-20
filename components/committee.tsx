@@ -8,7 +8,7 @@ export function Committee() {
       role: "...",
       initials: 
             <img 
-              src="/Adrielly.png" 
+              src="/SiteBes2023/Adrielly.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -18,7 +18,7 @@ export function Committee() {
       role: "...",
       initials: 
             <img 
-              src="/Andre.png" 
+              src="/SiteBes2023/Andre.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -28,7 +28,7 @@ export function Committee() {
       role: "...",
       initials: 
             <img 
-              src="/Annia.png" 
+              src="/SiteBes2023/Annia.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -38,7 +38,7 @@ export function Committee() {
       role: "...",
       initials:  
             <img 
-              src="/Doglas.png" 
+              src="/SiteBes2023/Doglas.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -48,7 +48,7 @@ export function Committee() {
       role: "...",
       initials:  
             <img 
-              src="/Fabricio.png" 
+              src="/SiteBes2023/Fabricio.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -58,7 +58,7 @@ export function Committee() {
       role: "...",
       initials:  
             <img 
-              src="/Glaucia.png" 
+              src="/SiteBes2023/Glaucia.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -68,7 +68,7 @@ export function Committee() {
       role: "...",
       initials:  
             <img 
-              src="/joselia.png" 
+              src="/SiteBes2023/joselia.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,
@@ -78,7 +78,7 @@ export function Committee() {
       role: "...",
       initials:  
             <img 
-              src="/Yago.png" 
+              src="/SiteBes2023/Yago.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />,

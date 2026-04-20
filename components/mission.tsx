@@ -9,7 +9,7 @@ export function Mission() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="/nossa-missao.jpg"
+              src="/SiteBes2023/nossa-missao.jpg"
               alt="Turma BES 2023 UEPA"
               fill
               className="object-cover"

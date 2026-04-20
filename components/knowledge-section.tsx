@@ -14,7 +14,7 @@ export function KnowledgeSection() {
           {/* Card Esquerdo - Seja um Patrono (ocupa toda altura) */}
           <div className="lg:row-span-2 relative rounded-xl overflow-hidden min-h-[500px] group">
             <Image
-              src="/card1"
+              src="/SiteBes2023/card1"
               alt="Alunos recebendo certificados no evento SEMED"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -39,7 +39,7 @@ export function KnowledgeSection() {
           {/* Card Direito Superior - Hackathon (largo) */}
           <div className="lg:col-span-2 relative rounded-xl overflow-hidden min-h-[240px] group">
             <Image
-              src="/card2.jpeg"
+              src="/SiteBes2023/card2.jpeg"
               alt="Equipe vencedora do Hackathon UEPA 2025"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -58,7 +58,7 @@ export function KnowledgeSection() {
           {/* Cards Inferiores - Dois lado a lado */}
           <div className="relative rounded-xl overflow-hidden min-h-[240px] group">
             <Image
-              src="/card3.jpg"
+              src="/SiteBes2023/card3.jpg"
               alt="Sistema de frequências desenvolvido para a SEMED"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -76,7 +76,7 @@ export function KnowledgeSection() {
 
           <div className="relative rounded-xl overflow-hidden min-h-[240px] group">
             <Image
-              src="/card4.png"
+              src="/SiteBes2023/card4.png"
               alt="Realização de evento na escola municipal"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"

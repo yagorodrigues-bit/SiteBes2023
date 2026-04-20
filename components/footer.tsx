@@ -17,7 +17,7 @@ export function Footer() {
               <div className="container mx-auto px-4 py-4 flex items-center justify-between">
   <div className="flex items-center gap-3">
     <img 
-      src="/logo1.png" 
+      src="/SiteBes2023/logo1.png" 
       alt="Logo UEPA BES" 
       className="h-10 w-auto object-contain" 
     />

@@ -36,7 +36,7 @@ export function Header() {
         <div className="flex items-center">
           <Link href="/">
             <img 
-              src="/logo1.png" 
+              src="/SiteBes2023/logo1.png" 
               alt="Logo UEPA BES" 
               className="h-12 w-auto object-contain" 
             />

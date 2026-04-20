@@ -56,7 +56,7 @@ export function HowToSupport() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/fundoPix.png"
+          src="/SiteBes2023/fundoPix.png"
           alt="Background"
           fill
           className="object-cover"
