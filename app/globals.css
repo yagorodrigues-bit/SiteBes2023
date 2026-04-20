@@ -134,8 +134,8 @@
 @layer utilities {
   .animate-scroll {
     display: flex;
-    width: max-content;
-    animation: scroll 20s linear infinite;
+    width: max-content; /* Garante que o contêiner tenha o tamanho real dos itens */
+    animation: scroll 25s linear infinite;
   }
 }
 
@@ -144,12 +144,16 @@
     transform: translateX(0);
   }
   100% {
-    /* Move metade da largura total (já que duplicamos a lista) */
-    transform: translateX(calc(-50% - 12px)); 
+    /* Movemos -50% porque a lista está duplicada. 
+       Ao chegar em 50%, a segunda metade da lista está exatamente
+       na mesma posição que a primeira metade estava no 0%, 
+       criando o efeito infinito sem saltos.
+    */
+    transform: translateX(-50%);
   }
 }
 
-/* Pausa a animação quando o mouse passa por cima */
+/* Opcional: Pausar ao passar o mouse para facilitar a leitura */
 .group:hover .animate-scroll {
   animation-play-state: paused;
 }

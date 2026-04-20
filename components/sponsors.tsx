@@ -5,12 +5,12 @@ export function Sponsors() {
   // 1. COLOQUE OS CAMINHOS DAS SUAS IMAGENS AQUI
   // As imagens devem estar dentro da pasta /public/
   const logos = [
-    { src: "/patrocinador.png", alt: "Patrocinador 1" },
-    { src: "/patrocinador.png", alt: "Patrocinador 2" },
-    { src: "/patrocinador.png", alt: "Patrocinador 3" },
-    { src: "/patrocinador.png", alt: "Patrocinador 4" },
-    { src: "/patrocinador.png", alt: "Patrocinador 5" },
-    { src: "/patrocinador.png", alt: "Patrocinador 6" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 1" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 2" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 3" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 4" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 5" },
+    { src: "/SiteBes2023/patrocinador.png", alt: "Patrocinador 6" },
   ]
 
   return (
