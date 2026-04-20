@@ -86,22 +86,32 @@ export function HowToSupport() {
         </Reveal>
 
         {/* Tab Buttons - Mantido conforme seu código original */}
-        <div className="flex justify-center gap-4 mb-8">
-          <Button 
-            variant={activeTab === "individual" ? "secondary" : "outline"}
-            onClick={() => setActiveTab("individual")}
-            className={activeTab === "individual" ? "bg-secondary text-primary" : "text-white border-white/30"}
-          >
-            <User className="w-4 h-4 mr-2" /> Contribuição Individual
-          </Button>
-          <Button 
-            variant={activeTab === "empresa" ? "secondary" : "outline"}
-            onClick={() => setActiveTab("empresa")}
-            className={activeTab === "empresa" ? "bg-secondary text-primary" : "text-white border-white/30"}
-          >
-            <Building2 className="w-4 h-4 mr-2" /> Patrocínio Empresarial
-          </Button>
-        </div>
+       {/* Tab Buttons */}
+<div className="flex justify-center gap-4 mb-8">
+  <Button
+    variant={activeTab === "individual" ? "secondary" : "outline"}
+    onClick={() => setActiveTab("individual")}
+    className={activeTab === "individual" 
+      ? "bg-secondary text-primary font-bold" 
+      : "bg-white text-black border-white/30 hover:bg-white/90" // Alterado para text-black
+    }
+  >
+    <User className="w-4 h-4 mr-2" />
+    Contribuição Individual
+  </Button>
+  
+  <Button
+    variant={activeTab === "empresa" ? "secondary" : "outline"}
+    onClick={() => setActiveTab("empresa")}
+    className={activeTab === "empresa" 
+      ? "bg-secondary text-primary font-bold" 
+      : "bg-white text-black border-white/30 hover:bg-white/90" // Alterado para text-black
+    }
+  >
+    <Building2 className="w-4 h-4 mr-2" />
+    Patrocínio Empresarial
+  </Button>
+</div>
 
         {/* Individual Contribution */}
         {activeTab === "individual" && (
