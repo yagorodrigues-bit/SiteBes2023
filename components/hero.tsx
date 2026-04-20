@@ -55,9 +55,9 @@ export function Hero() {
   <AnimatePresence mode="wait">
     <motion.span
       key={words[index]}
-      initial={{ y: 50, opacity: 0 }}
+      initial={{ y: 60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -50, opacity: 0 }}
+      exit={{ y: -60, opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       className="text-3xl md:text-4xl lg:text-5xl font-semibold block absolute text-center w-full"
     >
