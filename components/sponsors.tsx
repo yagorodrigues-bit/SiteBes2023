@@ -43,7 +43,7 @@ export function Sponsors() {
                   src={logo.src}
                   alt={logo.alt}
                   fill
-                  className="object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                  className="object-contain transition-opacity opacity-100 group-hover:scale-105"
                 />
               </div>
             </Card>
