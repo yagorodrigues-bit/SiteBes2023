@@ -129,10 +129,10 @@ export function Committee() {
               className="h-12 w-auto object-contain" 
             />,
       links: {
-        whatsapp: "",
-        github: "",
-        linkedin: "",
-        portfolio: ""
+        whatsapp: "https://wa.me/5591991186294?",
+        github: "https://github.com/yagorodrigues-bit",
+        linkedin: "www.linkedin.com/in/yago-kabraw-b764581b1",
+        portfolio: "https://yagorodrigues-bit.github.io/Portif-lio-Yago-Kbraw/"
       }
     },
   ]
