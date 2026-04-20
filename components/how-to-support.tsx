@@ -114,30 +114,59 @@ export function HowToSupport() {
 </div>
 
         {/* Individual Contribution */}
-        {activeTab === "individual" && (
-           <div className="max-w-2xl mx-auto">
-             <Reveal direction="up">
-               <Card className="bg-white/95 backdrop-blur-sm">
-                 <CardContent className="pt-6 text-center space-y-6">
-                    <CardTitle className="text-foreground">Apoie Nossa Turma</CardTitle>
-                    <p className="text-muted-foreground">Faça sua doação via PIX de forma rápida e segura</p>
-                    <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center border-2 border-primary/20 overflow-hidden relative">
-                      <Image src="/SiteBes2023/qrcode-pix.jpeg" alt="QR Code" fill className="object-contain p-2" />
-                    </div>
-                    <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
-                      <div className="text-left">
-                        <p className="text-xs text-muted-foreground uppercase font-bold">Chave PIX</p>
-                        <p className="font-mono text-sm break-all">{pixKey}</p>
-                      </div>
-                      <Button variant="outline" size="sm" onClick={() => handleCopy(pixKey)}>
-                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                      </Button>
-                    </div>
-                 </CardContent>
-               </Card>
-             </Reveal>
-           </div>
-        )}
+{/* Individual Contribution */}
+{activeTab === "individual" && (
+  <div className="max-w-2xl mx-auto">
+    <Reveal direction="up">
+      <Card className="bg-white/95 backdrop-blur-sm">
+        <CardContent className="pt-6 text-center space-y-6">
+          <CardTitle className="text-foreground">Apoie Nossa Turma</CardTitle>
+          <p className="text-muted-foreground">
+            Faça sua doação via PIX de forma rápida e segura
+          </p>
+          
+          <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center border-2 border-primary/20 overflow-hidden relative">
+            <Image 
+              src="/SiteBes2023/qrcode-pix.jpeg" 
+              alt="QR Code" 
+              fill 
+              className="object-contain p-2" 
+            />
+          </div>
+
+          <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between gap-4">
+            <div className="text-left">
+              <p className="text-xs text-muted-foreground uppercase font-bold">Chave PIX</p>
+              <p className="font-mono text-sm break-all text-foreground">{pixKey}</p>
+            </div>
+            <Button variant="outline" size="sm" onClick={() => handleCopy(pixKey)}>
+              {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
+            </Button>
+          </div>
+
+          {/* Novo Botão de WhatsApp para Mídia/Comprovante */}
+          <Button 
+            className="w-full bg-[#25D366] hover:bg-[#25D366]/90 text-white gap-2"
+            asChild
+          >
+            <a 
+              href={`https://wa.me/5591991186294?text=${encodeURIComponent("Olá! Fiz uma contribuição individual e gostaria de enviar meu comprovante e nome para o site.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Enviar Nome/Comprovante
+            </a>
+          </Button>
+
+          <div className="text-xs text-muted-foreground pt-2">
+            <p>Banco: Inter | Titular: Yago Rodrigues Cabral</p>
+          </div>
+        </CardContent>
+      </Card>
+    </Reveal>
+  </div>
+)}
 
         {/* Company Sponsorship */}
         {activeTab === "empresa" && (
