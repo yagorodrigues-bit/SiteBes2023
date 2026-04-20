@@ -33,7 +33,7 @@ export function HowToSupport() {
       icon: Award,
       emoji: "🥈",
       value: "R$ 50 - R$ 199",
-      qrCode: "/SiteBes2023/qrcode-prata.png", // Adicione estas imgs na pasta public
+      qrCode: "/SiteBes2023/qrcodeix.jpeg", // Adicione estas imgs na pasta public
       whatsappMsg: "Olá! Sou apoiador Prata e quero enviar meus dados para o site.",
       benefits: [
         "Agradecimento oficial nas redes sociais da turma.",
@@ -45,7 +45,7 @@ export function HowToSupport() {
       icon: Star,
       emoji: "🥇",
       value: "R$ 200 - R$ 499",
-      qrCode: "/SiteBes2023/qrcode-ouro.png",
+      qrCode: "/SiteBes2023/qrcodeix.jpeg",
       whatsappMsg: "Olá! Sou apoiador Ouro e quero enviar minha logo para os materiais digitais.",
       benefits: [
         "Todos os benefícios da Cota Prata.",
@@ -58,7 +58,7 @@ export function HowToSupport() {
       icon: Diamond,
       emoji: "💎",
       value: "A partir de R$ 500",
-      qrCode: "/SiteBes2023/qrcode-diamante.png",
+      qrCode: "/SiteBes2023/qrcodeix.jpeg",
       whatsappMsg: "Olá! Sou apoiador Diamante. Gostaria de alinhar os detalhes da entrega dos convites e o envio do banner.",
       benefits: [
         "Todos os benefícios da Cota Ouro.",
@@ -226,7 +226,7 @@ export function HowToSupport() {
                   asChild
                 >
                   <a 
-                    href={`https://wa.me/55919XXXXXXXX?text=${encodeURIComponent(selectedTier?.whatsappMsg || "")}`}
+                    href={`https://wa.me/5591991186294?text=${encodeURIComponent(selectedTier?.whatsappMsg || "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
