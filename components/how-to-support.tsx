@@ -86,6 +86,7 @@ export function HowToSupport() {
         </Reveal>
 
         {/* Tab Buttons */}
+        {/* Tab Buttons */}
         <div className="flex justify-center gap-4 mb-8">
           <Button
             variant={activeTab === "individual" ? "secondary" : "outline"}
@@ -99,17 +100,24 @@ export function HowToSupport() {
             Contribuição Individual
           </Button>
           
-          <Button
-            variant={activeTab === "empresa" ? "secondary" : "outline"}
-            onClick={() => setActiveTab("empresa")}
-            className={activeTab === "empresa" 
-              ? "bg-secondary text-primary font-bold" 
-              : "bg-white text-black border-white/30 hover:bg-white/90"
-            }
+          <motion.div
+            animate={activeTab === "individual" ? { 
+              scale: [1, 1.05, 1],
+              transition: { repeat: Infinity, duration: 2, ease: "easeInOut" }
+            } : { scale: 1 }}
           >
-            <Building2 className="w-4 h-4 mr-2" />
-            Patrocínio Empresarial
-          </Button>
+            <Button
+              variant={activeTab === "empresa" ? "secondary" : "outline"}
+              onClick={() => setActiveTab("empresa")}
+              className={activeTab === "empresa" 
+                ? "bg-secondary text-primary font-bold" 
+                : "bg-white text-black border-white/30 hover:bg-white/90 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+              }
+            >
+              <Building2 className="w-4 h-4 mr-2" />
+              Patrocínio Empresarial
+            </Button>
+          </motion.div>
         </div>
 
         {/* Individual Contribution */}
