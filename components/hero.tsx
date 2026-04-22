@@ -109,28 +109,6 @@ export function Hero() {
           <Sponsors />
         </motion.div>
       </div>
-
-      {/* Scroll Indicator Animado */}
-      {/* <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <div className="w-8 h-12 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <motion.div 
-            animate={{ 
-              y: [0, 16, 0],
-            }}
-            transition={{ 
-              duration: 1.5, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
-            }}
-            className="w-1.5 h-3 bg-white/70 rounded-full" 
-          />
-        </div>
-      </motion.div> */}
     </section>
   )
 }

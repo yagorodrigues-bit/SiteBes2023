@@ -32,8 +32,8 @@ export function HowToSupport() {
       name: "Prata",
       icon: Award,
       emoji: "🥈",
-      value: "R$ 50 - R$ 199",
-      qrCode: "/SiteBes2023/qrcode-pix.jpeg", // Adicione estas imgs na pasta public
+      value: "R$ 500 – R$ 999",
+      qrCode: "/SiteBes2023/qrcode-pix.jpeg", 
       whatsappMsg: "Olá! Sou apoiador Prata e quero enviar meus dados para o site.",
       benefits: [
         "Agradecimento oficial nas redes sociais da turma.",
@@ -44,34 +44,34 @@ export function HowToSupport() {
       name: "Ouro",
       icon: Star,
       emoji: "🥇",
-      value: "R$ 200 - R$ 499",
+      value: "R$ 1.000 – R$ 1.499",
       qrCode: "/SiteBes2023/qrcode-pix.jpeg",
       whatsappMsg: "Olá! Sou apoiador Ouro e quero enviar minha logo para os materiais digitais.",
       benefits: [
-        "Todos os benefícios da Cota Prata.",
-        "Sua logo em destaque nos materiais digitais.",
-        "Menção especial durante a cerimônia oficial.",
+        "Logotipo em destaque no site da turma.",
+        "Menção especial durante a cerimônia.",
+        "Post de patrocinador em destaque nas redes sociais.",
       ],
     },
     {
       name: "Diamante",
       icon: Diamond,
       emoji: "💎",
-      value: "A partir de R$ 500",
+      value: "A partir de R$ 1.500",
       qrCode: "/SiteBes2023/qrcode-pix.jpeg",
       whatsappMsg: "Olá! Sou apoiador Diamante. Gostaria de alinhar os detalhes da entrega dos convites e o envio do banner.",
       benefits: [
         "Todos os benefícios da Cota Ouro.",
-        "Sua logo impressa no convite oficial do evento.",
-        "Espaço exclusivo para banner físico no local.",
-        "2 Convites VIP para o evento presencial.",
+        "Logotipo com maior destaque em todos os materiais (Site e Painel).",
+        "Logotipo no painel físico de apoiadores do evento.",
+        "Logotipo impresso nos materiais oficiais do evento.",
       ],
     },
   ]
 
   return (
     <section id="apoiar" className="relative py-16 md:py-24 overflow-hidden">
-      {/* Background - Mantido conforme seu código original */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image src="/SiteBes2023/fundoPix.png" alt="Background" fill className="object-cover" />
         <div className="absolute inset-0 bg-primary/90" />
@@ -85,88 +85,85 @@ export function HowToSupport() {
           </p>
         </Reveal>
 
-        {/* Tab Buttons - Mantido conforme seu código original */}
-       {/* Tab Buttons */}
-<div className="flex justify-center gap-4 mb-8">
-  <Button
-    variant={activeTab === "individual" ? "secondary" : "outline"}
-    onClick={() => setActiveTab("individual")}
-    className={activeTab === "individual" 
-      ? "bg-secondary text-primary font-bold" 
-      : "bg-white text-black border-white/30 hover:bg-white/90" // Alterado para text-black
-    }
-  >
-    <User className="w-4 h-4 mr-2" />
-    Contribuição Individual
-  </Button>
-  
-  <Button
-    variant={activeTab === "empresa" ? "secondary" : "outline"}
-    onClick={() => setActiveTab("empresa")}
-    className={activeTab === "empresa" 
-      ? "bg-secondary text-primary font-bold" 
-      : "bg-white text-black border-white/30 hover:bg-white/90" // Alterado para text-black
-    }
-  >
-    <Building2 className="w-4 h-4 mr-2" />
-    Patrocínio Empresarial
-  </Button>
-</div>
+        {/* Tab Buttons */}
+        <div className="flex justify-center gap-4 mb-8">
+          <Button
+            variant={activeTab === "individual" ? "secondary" : "outline"}
+            onClick={() => setActiveTab("individual")}
+            className={activeTab === "individual" 
+              ? "bg-secondary text-primary font-bold" 
+              : "bg-white text-black border-white/30 hover:bg-white/90"
+            }
+          >
+            <User className="w-4 h-4 mr-2" />
+            Contribuição Individual
+          </Button>
+          
+          <Button
+            variant={activeTab === "empresa" ? "secondary" : "outline"}
+            onClick={() => setActiveTab("empresa")}
+            className={activeTab === "empresa" 
+              ? "bg-secondary text-primary font-bold" 
+              : "bg-white text-black border-white/30 hover:bg-white/90"
+            }
+          >
+            <Building2 className="w-4 h-4 mr-2" />
+            Patrocínio Empresarial
+          </Button>
+        </div>
 
         {/* Individual Contribution */}
-{/* Individual Contribution */}
-{activeTab === "individual" && (
-  <div className="max-w-2xl mx-auto">
-    <Reveal direction="up">
-      <Card className="bg-white/95 backdrop-blur-sm">
-        <CardContent className="pt-6 text-center space-y-6">
-          <CardTitle className="text-foreground">Apoie Nossa Turma</CardTitle>
-          <p className="text-muted-foreground">
-            Faça sua doação via PIX de forma rápida e segura
-          </p>
-          
-          <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center border-2 border-primary/20 overflow-hidden relative">
-            <Image 
-              src="/SiteBes2023/qrcode-pix.jpeg" 
-              alt="QR Code" 
-              fill 
-              className="object-contain p-2" 
-            />
-          </div>
+        {activeTab === "individual" && (
+          <div className="max-w-2xl mx-auto">
+            <Reveal direction="up">
+              <Card className="bg-white/95 backdrop-blur-sm">
+                <CardContent className="pt-6 text-center space-y-6">
+                  <CardTitle className="text-foreground">Apoie Nossa Turma</CardTitle>
+                  <p className="text-muted-foreground">
+                    Faça sua doação via PIX de forma rápida e segura
+                  </p>
+                  
+                  <div className="w-48 h-48 mx-auto bg-white rounded-lg flex items-center justify-center border-2 border-primary/20 overflow-hidden relative">
+                    <Image 
+                      src="/SiteBes2023/qrcode-pix.jpeg" 
+                      alt="QR Code" 
+                      fill 
+                      className="object-contain p-2" 
+                    />
+                  </div>
 
-          <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between gap-4">
-            <div className="text-left">
-              <p className="text-xs text-muted-foreground uppercase font-bold">Chave PIX</p>
-              <p className="font-mono text-sm break-all text-foreground">{pixKey}</p>
-            </div>
-            <Button variant="outline" size="sm" onClick={() => handleCopy(pixKey)}>
-              {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
-            </Button>
-          </div>
+                  <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between gap-4">
+                    <div className="text-left">
+                      <p className="text-xs text-muted-foreground uppercase font-bold">Chave PIX</p>
+                      <p className="font-mono text-sm break-all text-foreground">{pixKey}</p>
+                    </div>
+                    <Button variant="outline" size="sm" onClick={() => handleCopy(pixKey)}>
+                      {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
+                    </Button>
+                  </div>
 
-          {/* Novo Botão de WhatsApp para Mídia/Comprovante */}
-          <Button 
-            className="w-full bg-[#25D366] hover:bg-[#25D366]/90 text-white gap-2"
-            asChild
-          >
-            <a 
-              href={`https://wa.me/5591991186294?text=${encodeURIComponent("Olá! Fiz uma contribuição individual e gostaria de enviar meu nome para o site.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Enviar Nome/Comprovante
-            </a>
-          </Button>
+                  <Button 
+                    className="w-full bg-[#25D366] hover:bg-[#25D366]/90 text-white gap-2"
+                    asChild
+                  >
+                    <a 
+                      href={`https://wa.me/5591991186294?text=${encodeURIComponent("Olá! Fiz uma contribuição individual e gostaria de enviar meu nome para o site.")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      Enviar Nome/Comprovante
+                    </a>
+                  </Button>
 
-          <div className="text-xs text-muted-foreground pt-2">
-            <p>Banco: Inter | Titular: Yago Rodrigues Cabral</p>
+                  <div className="text-xs text-muted-foreground pt-2">
+                    <p>Banco: Inter | Titular: Yago Rodrigues Cabral</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Reveal>
           </div>
-        </CardContent>
-      </Card>
-    </Reveal>
-  </div>
-)}
+        )}
 
         {/* Company Sponsorship */}
         {activeTab === "empresa" && (
