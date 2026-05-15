@@ -9,7 +9,7 @@ export function Committee() {
   const members = [
     {
       name: "Adrielly Carvalhedo",
-      role: "...",
+      // role: "...",
       initials: 
             <img 
               src="/SiteBes2023/Adrielly.png" 
@@ -65,15 +65,15 @@ export function Committee() {
               className="h-12 w-auto object-contain" 
             />,
       links: {
-        whatsapp: "",
-        github: "",
-        linkedin: "",
+        whatsapp: "https://web.whatsapp.com/send/?phone=5591991164273&text=Ol%C3%A1",
+        github: "https://github.com/DouglasD2sa",
+        linkedin: "www.linkedin.com/in/douglas-sousa-dgsss",
         portfolio: ""
       }
     },
     {
       name: "Fabricio Cardoso",
-      role: "...",
+      // role: "...",
       initials:  
             <img 
               src="/SiteBes2023/Fabricio.png" 
@@ -81,9 +81,9 @@ export function Committee() {
               className="h-12 w-auto object-contain" 
             />,
       links: {
-        whatsapp: "",
+        whatsapp: "https://web.whatsapp.com/send/?phone=5591991211880&text=Ol%C3%A1",
         github: "",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/fabricio-brito-92718076/",
         portfolio: ""
       }
     },
@@ -97,10 +97,10 @@ export function Committee() {
               className="h-12 w-auto object-contain" 
             />,
       links: {
-        whatsapp: "",
-        github: "",
-        linkedin: "",
-        portfolio: ""
+        whatsapp: "http://lattes.cnpq.br/9195193517473990",
+        github: "https://github.com/GlauciaNunes",
+        linkedin: "https://www.linkedin.com/in/glaucia-nunes-3011352a9/",
+        portfolio: "http://lattes.cnpq.br/9195193517473990"
       }
     },
     {
